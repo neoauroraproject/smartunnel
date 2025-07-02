@@ -38,7 +38,7 @@ curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -
 chmod +x rogozar.sh
 ```
 ```
-sudo ./rogozar.sh
+bash rogozar.sh
 ```
 اجرای اسکریپت:
 
