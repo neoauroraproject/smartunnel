@@ -28,8 +28,11 @@
 اتصال اینترنت برای دانلود هسته gost (یا نصب دستی در صورت مشکل اتصال)
 
 نحوه استفاده
-دانلود اسکریپت:
-برای نصب و اجرای اسکریپت:
+```
+bash <(curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh)
+```
+یا دانلود اسکریپت:
+برای نصب و اجرای دستی اسکریپت:
 
 ```
 curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
@@ -37,13 +40,11 @@ curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -
 ```
 chmod +x rogozar.sh
 ```
-```
-bash rogozar.sh
-```
+
 اجرای اسکریپت:
 
 ```
-sudo ./rogozar.sh
+bash rogozar.sh
 ```
 در منوی نمایش داده شده:
 
