@@ -30,15 +30,20 @@
 دانلود اسکریپت:
 برای نصب و اجرای اسکریپت:
 
-```bash
+```
 curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
+```
+```
 chmod +x rogozar.sh
+```
+```
 sudo ./rogozar.sh
-
+```
 اجرای اسکریپت:
 
-pre lang="markdown"> ```bash
-sudo ./rogozar.sh```
+```
+sudo ./rogozar.sh
+```
 در منوی نمایش داده شده:
 
 گزینه 1 برای ساخت تانل جدید
@@ -73,9 +78,10 @@ sudo ./rogozar.sh```
 
 اجازه اجرا بدهید و به مسیر /usr/local/bin/gost منتقل کنید
 
-pre lang="markdown"> ```bash
+```
 chmod +x gost
-sudo mv gost /usr/local/bin/```
+sudo mv gost /usr/local/bin/
+```
 نکات مهم
 نام تانل‌ها باید یکتا باشد.
 
@@ -96,12 +102,4 @@ sudo mv gost /usr/local/bin/```
 
 لایسنس
 MIT License
-
-
-### نکته:
-- مطمئن شو که فقط **۳ تا backtick (`) پشت سر هم** قبل و بعد از کد استفاده شده (نه بیشتر، نه کمتر).
-- بعد از ` ```bash `، کد قرار می‌گیره.
-- بعدش ` ``` ` رو بذار و بعدش توضیحات عادی ادامه پیدا می‌کنه.
-
-اگر خواستی اینو بهت مستقیم تو فایل `README.md` بذارم یا به‌صورت HTML هم فرمت کنم، بگو انجام بدم.
 
