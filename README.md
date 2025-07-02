@@ -28,9 +28,13 @@
 
 نحوه استفاده
 دانلود اسکریپت:
-pre lang="markdown"> ```bash
+برای نصب و اجرای اسکریپت:
+
+```bash
 curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
-chmod +x rogozar.sh```
+chmod +x rogozar.sh
+sudo ./rogozar.sh
+
 اجرای اسکریپت:
 
 pre lang="markdown"> ```bash
@@ -93,4 +97,11 @@ sudo mv gost /usr/local/bin/```
 لایسنس
 MIT License
 
+
+### نکته:
+- مطمئن شو که فقط **۳ تا backtick (`) پشت سر هم** قبل و بعد از کد استفاده شده (نه بیشتر، نه کمتر).
+- بعد از ` ```bash `، کد قرار می‌گیره.
+- بعدش ` ``` ` رو بذار و بعدش توضیحات عادی ادامه پیدا می‌کنه.
+
+اگر خواستی اینو بهت مستقیم تو فایل `README.md` بذارم یا به‌صورت HTML هم فرمت کنم، بگو انجام بدم.
 
