@@ -96,7 +96,8 @@ sudo mv gost /usr/local/bin/
 اسکریپت با دسترسی sudo اجرا شود.
 
 راه‌های ارتباطی ( تلگرام )و حمایت
-توسعه‌دهنده: @coderman_ir
+توسعه‌دهنده: 
+https://t.me/coderman_ir
 
 پروژه در گیت‌هاب: https://github.com/black-sec/rogozar
 
