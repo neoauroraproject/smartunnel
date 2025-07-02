@@ -1,4 +1,4 @@
-<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;"># Rogozar Tunnel Setup Script
+<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;"># Rogozar Tunnel Setup Script</h1>
 معرفی
 اسکریپت Rogozar یک ابزار ساده و کاربردی برای مدیریت تانل‌های gost روی سرور لینوکسی است. با این اسکریپت می‌توانید به راحتی تانل بسازید، ویرایش کنید، حذف کنید، ریستارت کنید و همچنین هسته gost را نصب نمایید.
 
