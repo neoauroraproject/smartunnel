@@ -28,17 +28,12 @@
 
 نحوه استفاده
 دانلود اسکریپت:
-
-bash
-Copy
-Edit
+```bash
 curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
 chmod +x rogozar.sh
 اجرای اسکریپت:
 
-bash
-Copy
-Edit
+```bash
 sudo ./rogozar.sh
 در منوی نمایش داده شده:
 
@@ -74,9 +69,7 @@ sudo ./rogozar.sh
 
 اجازه اجرا بدهید و به مسیر /usr/local/bin/gost منتقل کنید
 
-bash
-Copy
-Edit
+```bash
 chmod +x gost
 sudo mv gost /usr/local/bin/
 نکات مهم
