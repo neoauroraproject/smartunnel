@@ -1,4 +1,7 @@
 <h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;">Rogozar Tunnel Setup Script</h1>
+
+![Rogozar](./menu.png)
+
 Introduction
 Rogozar is a smart and flexible script designed for creating and managing multi-tunnels on Linux servers.
 Unlike most traditional tools, Rogozar utilizes its own custom-built core (based on gost) to create multiple optimized tunnels simultaneously and intelligently switch between them. This ensures maximum stability, performance, and censorship bypassing capabilities.
