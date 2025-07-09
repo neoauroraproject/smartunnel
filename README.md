@@ -80,10 +80,10 @@ Option 5: Exit
 
 Contact & Support
 Developer:
-https://t.me/coderman_ir
+[![Telegram](https://t.me/coderman_ir)
 
 Telegram Channel:
-https://t.me/rogozar_script
+[![Telegram](https://t.me/rogozar_script)
 
 GitHub Project:
 https://github.com/black-sec/rogozar
