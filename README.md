@@ -4,6 +4,8 @@
 
 
 [Persian Readme](https://github.com/black-sec/rogozar/blob/main/README_FA.md)
+
+
 Introduction
 Rogozar is a smart and flexible script designed for creating and managing multi-tunnels on Linux servers.
 Unlike most traditional tools, Rogozar utilizes its own custom-built core (based on gost) to create multiple optimized tunnels simultaneously and intelligently switch between them. This ensures maximum stability, performance, and censorship bypassing capabilities.
