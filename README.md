@@ -1,110 +1,93 @@
-<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;"># Rogozar Tunnel Setup Script</h1>
+<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;">Rogozar Tunnel Setup Script</h1>
+Introduction
+Rogozar is a smart and flexible script designed for creating and managing multi-tunnels on Linux servers.
+Unlike most traditional tools, Rogozar utilizes its own custom-built core (based on gost) to create multiple optimized tunnels simultaneously and intelligently switch between them. This ensures maximum stability, performance, and censorship bypassing capabilities.
 
-معرفی
-اسکریپت Rogozar یک ابزار ساده و کاربردی برای مدیریت تانل‌های gost روی سرور لینوکسی است. با این اسکریپت می‌توانید به راحتی تانل بسازید، ویرایش کنید، حذف کنید، ریستارت کنید و همچنین هسته gost را نصب نمایید.
+Features
+Multi-Tunnel architecture with 7 concurrent tunnels:
 
-هدف این پروژه تسهیل کانفیگ و مدیریت تانل‌های امن و پایدار برای عبور ترافیک از طریق پروتکل‌های متنوع از جمله WSS و RTCP است.
+5 MWSS + Smux tunnels for different user load levels (adaptive & intelligent)
 
-ویژگی‌ها
-ساخت تانل با نام دلخواه با پیشوند rogozar-
+1 SSH tunnel for high-disruption scenarios
 
-پشتیبانی از دو حالت سرور ایران و سرور خارج (با تنظیمات متفاوت)
+1 ICMP tunnel for bypassing heavy national firewalls
 
-امکان انتخاب پورت‌ها به صورت چندگانه برای فوروارد کردن
+Smart core for automatic switching between tunnels based on network conditions and number of users
 
-ویرایش و حذف آسان تانل‌های ساخته شده
+Supports both Iran-based and non-Iran (international) servers with dedicated configurations
 
-ریستارت سریع تانل‌ها برای افزایش پایداری
+Full tunnel management:
 
-نصب خودکار هسته gost از مخزن رسمی گیت‌هاب
+Create, edit, delete, and restart with a single command
 
-نمایش وضعیت نصب هسته و IP سرور
+Persistent tunnels using systemd services
 
-پیش‌نیازها
-سیستم عامل: توزیع‌های لینوکس (مثلاً Ubuntu, Debian, CentOS)
+Easy installation of the core and services
 
-دسترسی روت یا sudo برای نصب سرویس‌ها و اجرای دستورات سیستم
+Displays the installation status of the core and server IP
 
-اتصال اینترنت برای دانلود هسته gost (یا نصب دستی در صورت مشکل اتصال)
+Requirements
+Operating System: Any Linux distribution (Ubuntu, Debian, CentOS, etc.)
 
-نحوه استفاده
+Root or sudo access
+
+Ports 8440 to 8446 must be free (used internally by Rogozar core)
+
+How to Use
+One-line installation:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh)
 ```
-یا دانلود اسکریپت:
-برای نصب و اجرای دستی اسکریپت:
+Manual installation::
 
 ```
 curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
-```
-```
 chmod +x rogozar.sh
-```
-
-اجرای اسکریپت:
-
-```
 bash rogozar.sh
 ```
-در منوی نمایش داده شده:
+Important Notes
+Tunnel names must be unique.
 
-گزینه 1 برای ساخت تانل جدید
+Ports 8440 to 8446 are reserved by Rogozar’s core. Ensure they are not used by other services.
 
-گزینه 2 برای ویرایش تانل‌های موجود
+If a tunnel becomes unresponsive, use the Restart option in the menu.
 
-گزینه 3 برای حذف تانل
+When setting up the non-Iran (client) side, a public key will be generated.
+You must place this key in /root/.ssh/rogozar.pub on the Iran-based server.
 
-گزینه 4 برای ریستارت تانل (رفع هنگی)
+The installation status of the gost core is displayed at the top of the menu (red if not installed).
 
-گزینه 5 برای نصب هسته gost
+Menu Options
+Option 1: Setup Iran-side (Relay Server)
+Deploys all 7 tunnel types (5 MWSS, SSH, ICMP) on the Iran-based server.
+⚠️ Ensure ports 8440–8446 are free.
 
-گزینه 6 خروج از برنامه
+Option 2: Setup Kharej-side (Client Server)
+Prompts you to enter the IP/domain and ports of the Iran-based server.
+Configures the client to intelligently connect to the smart tunnel core on the Iranian side.
 
-جزئیات ساخت تانل
-هنگام ساخت تانل، ابتدا نامی به دلخواه وارد کنید (مثلاً iran01)، پیشوند rogozar- به صورت خودکار اضافه می‌شود.
+Option 3: Manage Tunnels (Edit / Restart / Status)
+Allows you to manage existing services: restart, modify, or view status of tunnels.
 
-در مرحله بعد انتخاب می‌کنید سرور شما داخل ایران است یا خارج.
+Option 4: Install gost Core
+Installs the core (gost) if it’s not already present.
+If GitHub is blocked, you can manually install the binary (see the guide below).
 
-اگر داخل ایران باشد، تانل به صورت relay+wss با گزینه bind=true ساخته می‌شود.
+Option 5: Exit
 
-اگر خارج ایران باشد، باید نام دامنه سرور ایران و پورت‌های هدف را وارد کنید (چند پورت با کاما جدا شوند).
-
-اسکریپت سرویس systemd با نام rogozar-<name> ایجاد می‌کند تا تانل به صورت دائمی و خودکار روی سرور اجرا شود.
-
-نصب دستی هسته gost (در صورت مشکل دسترسی)
-اگر سرور ایران به گیت‌هاب دسترسی ندارد، می‌توانید هسته gost را از مکانی دیگر دانلود و به صورت دستی نصب کنید:
-
-فایل باینری را روی کامپیوتر خود دانلود کنید (مثلاً از جای امن)
-
-آن را با scp به سرور منتقل کنید
-
-اجازه اجرا بدهید و به مسیر /usr/local/bin/gost منتقل کنید
-
-```
-chmod +x gost
-sudo mv gost /usr/local/bin/
-```
-نکات مهم
-نام تانل‌ها باید یکتا باشد.
-
-برای تغییرات در سرویس‌ها از گزینه ویرایش استفاده کنید.
-
-اگر تانل هنگ کرد، گزینه ریستارت به کمک شما می‌آید.
-
-اگر هسته نصب نشده باشد، در بالای منو به رنگ قرمز نمایش داده می‌شود.
-
-اسکریپت با دسترسی bash اجرا شود.
-
-راه‌های ارتباطی ( تلگرام ) و حمایت
-توسعه‌دهنده: 
+Contact & Support
+Developer:
 https://t.me/coderman_ir
 
-کانال تلگرام :‌
+Telegram Channel:
 https://t.me/rogozar_script
-پروژه در گیت‌هاب: https://github.com/black-sec/rogozar
 
-اگر پیشنهادی یا مشکلی داشتید، در بخش Issues مطرح کنید.
+GitHub Project:
+https://github.com/black-sec/rogozar
 
-لایسنس
+For suggestions or issues, open a ticket in the Issues section.
+
+License
 MIT License
+
 
