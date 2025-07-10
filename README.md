@@ -1,9 +1,9 @@
-<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;">Rogozar Tunnel Setup Script</h1>
+<h1 align="center" style="font-size: 2.5em; margin-bottom: 15px; color: #2c3e50;">Smart Tunnel Setup Script</h1>
 
 ![Menu](./menu.png)
 
 
-[Persian Readme](https://github.com/black-sec/rogozar/blob/main/README_FA.md)
+[Persian Readme](https://github.com/neoauroraproject/smartunnel/blob/main/README_FA.md)
 
 
 Introduction
@@ -43,12 +43,12 @@ Ports 8440 to 8446 must be free (used internally by Rogozar core)
 How to Use
 One-line installation:
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/neoauroraproject/smartunnel/main/rogozar.sh)
 ```
 Manual installation::
 
 ```
-curl -fsSL https://raw.githubusercontent.com/black-sec/rogozar/main/rogozar.sh -o rogozar.sh
+curl -fsSL https://raw.githubusercontent.com/neoauroraproject/smartunnel/main/rogozar.sh -o rogozar.sh
 chmod +x rogozar.sh
 bash rogozar.sh
 ```
@@ -90,7 +90,7 @@ Telegram Channel:
 https://t.me/rogozar_script
 
 GitHub Project:
-https://github.com/black-sec/rogozar
+https://github.com/neoauroraproject/smartunnel
 
 For suggestions or issues, open a ticket in the Issues section.
 
